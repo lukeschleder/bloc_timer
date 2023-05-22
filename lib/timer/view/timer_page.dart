@@ -1,5 +1,6 @@
 import 'package:bloc_timer/timer/bloc/timer_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc_timer/ticker.dart';
 import 'package:bloc_timer/timer/timer.dart';
@@ -20,7 +21,21 @@ class TimerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Timer')),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        title: Text(
+          'Flutter Timer',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+        
+          statusBarColor: Colors.black54,
+          statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
+          statusBarBrightness: Brightness.light, // For iOS (dark icons)
+        ),
+      ),
       body: const Stack(
         children: [
           Background(),
@@ -55,6 +70,7 @@ class TimerText extends StatelessWidget {
     );
   }
 }
+
 class Actions extends StatelessWidget {
   const Actions({super.key});
 
@@ -132,5 +148,3 @@ class Background extends StatelessWidget {
     );
   }
 }
-
-

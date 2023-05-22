@@ -1,16 +1,14 @@
 # bloc_timer
 
-A new Flutter project.
+Luke's BLOC and Flutter Timer.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project uses the BLOC pattern to manage state and control events for a simple timer application.  There is a bloc state for all variations of the timer which allows for fine grained control.  There is also an event for each interaction a user can have with this timer.  The timer bloc itself makes the events, states, and ticker work together.  For more details check out the code in the bloc directory nested in the lib folder!
 
-A few resources to get you started if this is your first Flutter project:
+## Running locally
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Simply clone this public repository and run with your choice of IDE on an emulator or simulator.  No setup required!
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Bloc and Flutter Timer image](iphone13_bloc_timer.png)
+
